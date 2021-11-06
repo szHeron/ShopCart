@@ -1,4 +1,4 @@
-const data = [
+export const data = [
     {
         id: "1",
         name: "Kaiak Pulso",
@@ -18,10 +18,24 @@ const data = [
         name: "J'dore",
         brand: "DIOR",
         price: 585.90,
-        img: 'https://www.dior.com/couture/var/dior/storage/images/horizon/products/fp-pcd/folder-fragrance/folder-j_adore/y0715201-jadore-edp/strate05_crossell/20352697-13-eng-US/strate05_crossell2_1440_1200.jpg?imwidth=460'
+        img: 'https://i.pinimg.com/originals/d1/14/8d/d1148d29e15e0d332293f49615cefeda.png'
     },
     {
         id: "4",
+        name: "Nº 5",
+        brand: "CHANNEL",
+        price: 585.90,
+        img: 'https://prd-v3-i.chanel.com/fnbv3/image/full/chanel__com_type1/products_full/n_5-eau-de-parfum-vaporizador.P125420.jpg'
+    },
+    {
+        id: "5",
+        name: "J'dore",
+        brand: "DIOR",
+        price: 585.90,
+        img: 'https://i.pinimg.com/originals/d1/14/8d/d1148d29e15e0d332293f49615cefeda.png'
+    },
+    {
+        id: "6",
         name: "Nº 5",
         brand: "CHANNEL",
         price: 585.90,

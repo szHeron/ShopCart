@@ -4,13 +4,17 @@ export const styles = StyleSheet.create({
     container: {
       flex: 1,
       alignItems: 'center',
-      justifyContent: 'flex-start',
+      justifyContent: 'space-between',
       backgroundColor: '#fff',
       padding: 15,
       paddingTop: 35
     },
-    title: {
+    ProductContent:{
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    TextInfo: {
       fontSize: 25,
       marginBottom: 15
-    }
+    },
 });
