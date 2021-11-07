@@ -14,7 +14,7 @@ export default function SearchBar({setFilters, filters}){
                     onChangeText={text => setFilters({...filters, name: text})}
                 />
             </View>
-            <ScrollView horizontal={true} contentContainerStyle={{ flexGrow: 1 }}>
+            <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} contentContainerStyle={{ flexGrow: 1 }}>
                 <Button style={{marginRight: 5}} color="#add" mode={filters.feminine?"contained":"outlined"} onPress={()=>setFilters({...filters, feminine: !filters.feminine})}>Femininos</Button>
                 <Button style={{marginRight: 5}} color="#add" mode={filters.masculine?"contained":"outlined"} onPress={()=>setFilters({...filters, masculine: !filters.masculine})}>Masculinos</Button>
                 <Button style={{marginRight: 5}} color="#add" mode={filters.childish?"contained":"outlined"} onPress={()=>setFilters({...filters, childish: !filters.childish})}>Infantis</Button>
