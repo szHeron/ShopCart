@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     conteinerPerfumes: {
-        margin: 20,
+        margin: 10,
         justifyContent: 'center',
         alignItems: 'center',
     },
