@@ -8,7 +8,7 @@ import { styles } from './styles';
 export default function Cart({navigation}){
     return(
         <SafeAreaView style={styles.container}>
-            <Title style={styles.title}>Carrinho</Title>
+            <Title style={styles.title}>Carrinhoa</Title>
 
         </SafeAreaView>
     )
