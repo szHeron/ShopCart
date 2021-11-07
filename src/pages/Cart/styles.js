@@ -3,14 +3,24 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     container: {
       flex: 1,
-      alignItems: 'center',
-      justifyContent: 'flex-start',
+      alignItems: 'flex-start',
+      justifyContent: 'center',
       backgroundColor: '#fff',
       padding: 15,
       paddingTop: 35
     },
-    title: {
-      fontSize: 25,
-      marginBottom: 15
+    conteinerPerfumes: {
+      flexDirection: 'row',
+      margin: 10,
+      justifyContent: 'space-between',
+      alignItems: 'center',
+    },
+    perfumeImg: {
+      height: 150,
+      width: 100,
+      marginRight: 25
+    },
+    removeButton: {
+      backgroundColor: '#f00'
     }
 });
