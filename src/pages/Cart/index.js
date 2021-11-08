@@ -71,12 +71,14 @@ export default function Cart({navigation}){
         );
     };
 
-    const subtotal = cart.reduce((acc, obj)=>{
+    const discount = 0;
+    
+    const subtotal = cart.length > 0?cart.reduce((acc, obj)=>{
         if(typeof acc == 'object')
             acc = 0
         acc += obj.item.price * obj.amount;
         return acc;
-    }, {})
+    }, {}):0;
 
     return(
         <SafeAreaView style={styles.container}>
@@ -95,11 +97,11 @@ export default function Cart({navigation}){
             </View>
             <View style={styles.prices}>
                 <Text>Descontos</Text>
-                <Text style={{color: '#f00'}}>R$ -{50}</Text>
+                <Text style={{color: '#f00'}}>R$ -{discount}</Text>
             </View>
             <View style={{...styles.prices, marginTop: 20, borderTopColor: '#000', borderTopWidth: 1}}>
                 <Text style={{fontWeight: 'bold'}}>TOTAL</Text>
-                <Text>R$ {(subtotal - 50).toFixed(2)}</Text>
+                <Text>R$ {(subtotal - discount).toFixed(2)}</Text>
             </View>
         </SafeAreaView>
     )

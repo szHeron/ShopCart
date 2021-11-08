@@ -18,7 +18,7 @@ export default function Product({navigation, route}){
             </View>
             <Button icon="cart" style={styles.BuyButton} color="#add" mode="contained" onPress={() =>{
                     AddCart(route.params.item, 1);
-                    navigation.navigate('Cart');
+                    navigation.navigate('Carrinho');
                 }
             }>
                 Comprar
