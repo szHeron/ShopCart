@@ -1,6 +1,6 @@
 import { StyleSheet, Dimensions } from "react-native";
 
-const fullWidth = Dimensions.get('window').width;
+const fullWidth = Dimensions.get('window').width - 40;
 
 export const styles = StyleSheet.create({
     container: {
@@ -8,16 +8,24 @@ export const styles = StyleSheet.create({
       alignItems: 'flex-start',
       justifyContent: 'center',
       backgroundColor: '#fff',
-      padding: 25
+      padding: 20
     },
     conteinerPerfumes: {
       width: fullWidth,
       flexDirection: 'row',
-      paddingRight: 60,
       justifyContent: 'space-between',
       alignItems: 'center',
+      padding: 5,
       borderBottomColor: '#000',
-      borderBottomWidth: 1,
+      borderBottomWidth: 1
+    },
+    title:{
+      marginBottom: 15,
+      fontSize: 22,
+      paddingLeft: 5,
+      paddingRight: 5,
+      borderBottomColor: '#000', 
+      borderBottomWidth: 1
     },
     perfumeImg: {
       height: 125,
@@ -42,5 +50,11 @@ export const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
       marginBottom: 5
+    },
+    prices: {
+      flexDirection: 'row',
+      width: fullWidth,
+      justifyContent: 'space-between',
+      alignItems: 'center'
     }
 });

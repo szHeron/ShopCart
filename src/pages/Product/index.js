@@ -17,7 +17,7 @@ export default function Product({navigation, route}){
                 <Text style={{fontSize: 20}}>Ou 6x de R$ {(route.params.item.price/6).toFixed(2)}</Text>
             </View>
             <Button icon="cart" style={styles.BuyButton} color="#add" mode="contained" onPress={() =>{
-                    AddCart(route.params.item);
+                    AddCart(route.params.item, 1);
                     navigation.navigate('Cart');
                 }
             }>

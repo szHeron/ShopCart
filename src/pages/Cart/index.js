@@ -15,8 +15,8 @@ export default function Cart({navigation}){
                     <View>
                         <Text style={{fontWeight: 'bold'}}>{item.item.name}</Text>
                         <Text>{item.item.brand}</Text>
-                        <Text style={{fontWeight: 'bold', fontSize: 17, color: 'green'}}>R$ {item.item.price}</Text>
-                        <Text style={{fontWeight: 'bold', fontSize: 17}}>ou 6x de {(item.item.price/6).toFixed(2)}</Text>
+                        <Text style={{fontWeight: 'bold', fontSize: 17, color: 'green'}}>R$ {(item.item.price*item.amount).toFixed(2)}</Text>
+                        <Text style={{fontWeight: 'bold', fontSize: 17}}>ou 6x de {(item.item.price*item.amount/6).toFixed(2)}</Text>
                         <View style={{flexDirection: 'row', alignItems: 'center'}}>
                             <FAB
                                 icon="minus" 
@@ -72,6 +72,8 @@ export default function Cart({navigation}){
     };
 
     const subtotal = cart.reduce((acc, obj)=>{
+        if(typeof acc == 'object')
+            acc = 0
         acc += obj.item.price * obj.amount;
         return acc;
     }, {})
@@ -86,11 +88,18 @@ export default function Cart({navigation}){
                 numColumns={1}
                 style={{flex: 1}}
             />
-            <Title style={styles.title}>Total</Title>
-            <Divider/>
-            <View>
+            <Title style={styles.title}>Valor da compra</Title>
+            <View style={styles.prices}>
                 <Text>Subtotal</Text>
-                <Text>{Number(subtotal.replace(/[\d\.\,]+/g,'')).toFixed(2)}</Text>
+                <Text style={{color: '#00ff00'}}>R$ {subtotal.toFixed(2)}</Text>
+            </View>
+            <View style={styles.prices}>
+                <Text>Descontos</Text>
+                <Text style={{color: '#f00'}}>R$ -{50}</Text>
+            </View>
+            <View style={{...styles.prices, marginTop: 20, borderTopColor: '#000', borderTopWidth: 1}}>
+                <Text style={{fontWeight: 'bold'}}>TOTAL</Text>
+                <Text>R$ {(subtotal - 50).toFixed(2)}</Text>
             </View>
         </SafeAreaView>
     )
