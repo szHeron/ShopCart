@@ -17,7 +17,6 @@ export const styles = StyleSheet.create({
     },
     SearchBarStyle: {
         flexGrow: 1,
-        borderRadius: 10,
-        marginRight: 15
+        borderRadius: 10
     }
 });
