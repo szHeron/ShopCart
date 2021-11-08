@@ -5,13 +5,15 @@ const CartContext = createContext();
 export function CartProvider({ children }){
   const [cart, setCart] = useState([]);
 
-    function AddCart(item) {
-      if(!cart.find((temp)=>{return temp.id === item.id}))
-        setCart(oldArray => [...oldArray, item])
+    function AddCart(newItem, qtd) {
+      if(!cart.find((temp)=>{return temp.item.id === newItem.id}))
+        setCart(oldArray => [...oldArray, {item: newItem, amount: 1}])
+      RemoveCart(newItem.id);
+      setCart(oldArray => [...oldArray, {item: newItem, amount: !qtd?1:qtd}])
     }
 
     function RemoveCart(id) {
-      setCart(cart.filter(item => item.id !== id));
+      setCart(cart.filter(temp => temp.item.id !== id));
     }
 
   return(
