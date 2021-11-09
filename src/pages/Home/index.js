@@ -6,9 +6,7 @@ import { styles } from './styles';
 export default function Home({navigation}){
     return(
         <SafeAreaView style={styles.container}>
-            <Title style={styles.title}>Palhano Perfumado</Title>
-            <Button onPress={()=>navigation.navigate('Products')}>PRODUTOS</Button>
-            <Button onPress={()=>navigation.navigate('Cart')}>Carrinho</Button>
+            <Title style={styles.title}>Palhano Perfumaria</Title>
             <Button onPress={()=>navigation.navigate('SignIn')}>Login</Button>
             <Button onPress={()=>navigation.navigate('SignUp')}>Cadastro</Button>
         </SafeAreaView>

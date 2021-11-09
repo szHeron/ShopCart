@@ -1,4 +1,4 @@
-import React, { Children, createContext, useState } from "react";
+import React, { createContext, useState } from "react";
 
 const CartContext = createContext();
 
@@ -16,10 +16,15 @@ export function CartProvider({ children }){
       setCart(cart.filter(temp => temp.item.id !== id));
     }
 
+    function GetAmount() {
+      return cart.length;
+    }
+
   return(
     <CartContext.Provider value={{
         AddCart,
         RemoveCart,
+        GetAmount,
         cart
     }}>
         {children}

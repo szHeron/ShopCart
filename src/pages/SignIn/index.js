@@ -6,20 +6,15 @@ import { View, KeyboardAvoidingView, Image, TextInput, TouchableOpacity, Text, S
 export default function SignIn({navigation}){
     const [email, setEmail] = useState('')
     const [offset] = useState(new Animated.ValueXY({x: 0, y:95}));
-    const [opacity] = useReducer(new Animated.Value(0))
-
+    const [opacity] = useReducer(new Animated.Value(0));
+    
     useEffect(()=>{
-        Animated.parallel([
             Animated.spring(offset.y, {
                 toValue:0,
                 speed:4,
                 bounciness:20
-            }),
-            Animated.timing(opacity, {
-                toValue: 1,
-                duration:200,
-            })
-        ]).start();
+            }).start();
+            
 }, []);
 
     return(
