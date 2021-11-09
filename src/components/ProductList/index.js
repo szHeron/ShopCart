@@ -13,7 +13,7 @@ export default function ProductList({navigation, filters}){
                 <Text>{item.brand}</Text>
                 <Text style={{fontWeight: 'bold', fontSize: 17, color: 'green'}}>R$ {item.price}</Text>
                 <Text style={{fontWeight: 'bold', fontSize: 17, marginBottom: 10}}>ou 6x de {(item.price/6).toFixed(2)}</Text>
-                <Button color="#add" mode="contained" onPress={() => navigation.navigate('Product',{item: item})}>Comprar</Button>
+                <Button color="#add" mode="contained" onPress={() => navigation.navigate('Product',{item: item})}>Visualizar</Button>
             </View>
         );
     };

@@ -99,10 +99,13 @@ export default function Cart({navigation}){
                 <Text>Descontos</Text>
                 <Text style={{color: '#f00'}}>R$ -{discount}</Text>
             </View>
-            <View style={{...styles.prices, marginTop: 20, borderTopColor: '#000', borderTopWidth: 1}}>
+            <View style={{...styles.prices, marginTop: 20, marginBottom: 20, borderTopColor: '#000', borderTopWidth: 1}}>
                 <Text style={{fontWeight: 'bold'}}>TOTAL</Text>
                 <Text>R$ {(subtotal - discount).toFixed(2)}</Text>
             </View>
+            <Button icon="cart" color="#00ff00" mode="contained" style={{alignSelf: 'center'}}>
+                Comprar
+            </Button>
         </SafeAreaView>
     )
 };
