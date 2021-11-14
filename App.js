@@ -8,8 +8,6 @@ import Home from './src/pages/Home';
 import Products from './src/pages/Products';
 import Product from './src/pages/Product';
 import Cart from './src/pages/Cart';
-import SignIn from './src/pages/SignIn';
-import SignUp from './src/pages/SignUp';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -18,8 +16,6 @@ function HomeStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="HomeStack" component={Home} options={{headerShown: false}}/>
-      <Stack.Screen name="SignIn" component={SignIn} options={{headerShown: false}}/>
-      <Stack.Screen name="SignUp" component={SignUp} options={{headerShown: false}}/>
       <Stack.Screen name="Product" component={Product} options={{headerShown: false}}/>
     </Stack.Navigator>
   );
