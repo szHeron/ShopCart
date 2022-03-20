@@ -29,7 +29,7 @@ O app pode ser acessado pelo o aplicativo do expo ao ler o qrcode
 
 ## 💻 Projeto
 
-Esse projeto foi desenvolvido para ser um chat em realtime, e para por em pratica os conhecimentos das tecnologias typescript e firebase.
+Esse projeto foi desenvolvido para ser um chat em realtime, e para por em pratica os conhecimentos das tecnologias javascript e firebase.
 
 ## 🌟 Features
 
