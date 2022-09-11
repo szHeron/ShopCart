@@ -11,8 +11,8 @@ export default function ProductList({navigation, filters}){
                 <Image source={{uri: item.img}} style={styles.perfumeImg}/>
                 <Text style={{fontWeight: 'bold'}}>{item.name}</Text>
                 <Text>{item.brand}</Text>
-                <Text style={{fontWeight: 'bold', fontSize: 17, color: 'green'}}>R$ {item.price}</Text>
-                <Text style={{fontWeight: 'bold', fontSize: 17, marginBottom: 10}}>ou 6x de {(item.price/6).toFixed(2)}</Text>
+                <Text style={styles.textPerfumePrice}>R$ {item.price}</Text>
+                <Text style={styles.textPerfumeParcel}>ou 6x de {(item.price/6).toFixed(2)}</Text>
                 <Button color="#add" mode="contained" onPress={() => navigation.navigate('Product',{item: item})}>Visualizar</Button>
             </View>
         );
@@ -53,13 +53,13 @@ export default function ProductList({navigation, filters}){
     );
 
     return(
-        <View style={{flex: 1}}>
+        <View>
             <FlatList
                 data={filteredData}
                 renderItem={renderPerfumes}
                 keyExtractor={(item) => item.id}
                 numColumns={2}
-                style={{flex: 1}}
+                contentContainerStyle={{alignItems: "stretch"}}
             />
         </View>
     )

@@ -1,6 +1,6 @@
-import React, { useContext, useState } from 'react';
-import { SafeAreaView, FlatList, View, Image, TouchableOpacity, Dimensions } from 'react-native';
-import { Title, Text, Button, FAB, TextInput, Divider } from 'react-native-paper';
+import React, { useContext } from 'react';
+import { SafeAreaView, FlatList, View, Image } from 'react-native';
+import { Title, Text, Button, FAB, TextInput } from 'react-native-paper';
 import CartContext from '../../context/CartContext';
 import { styles } from './styles';
 
@@ -29,7 +29,6 @@ export default function Cart({navigation}){
                                 mode="outlined"
                                 keyboardType="numeric"
                                 style={styles.qtdInput}
-                                mode="flat"
                                 onChangeText={qtd => AddCart(item.item,Number(qtd.replace(/[^0-9]/g,'')))}
                             />
                             <FAB
